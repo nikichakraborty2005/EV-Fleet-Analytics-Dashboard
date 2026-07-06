@@ -1,0 +1,89 @@
+CREATE TABLE `customers` (
+  `customer_id` int NOT NULL,
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `phone` varchar(15) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `signup_date` datetime NOT NULL,
+  `kyc_status` enum('verified','pending','rejected') NOT NULL DEFAULT 'pending',
+  `city` enum('Bangalore','Delhi','Mumbai','Hyderabad','Pune') NOT NULL,
+  `referral_agent_id` int DEFAULT NULL,
+  PRIMARY KEY (`customer_id`),
+  KEY `fk_customer_referral_agent` (`referral_agent_id`),
+  CONSTRAINT `fk_customer_referral_agent` FOREIGN KEY (`referral_agent_id`) REFERENCES `sales_agents` (`agent_id`) ON DELETE SET NULL ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `hubs` (
+  `hub_id` int NOT NULL,
+  `hub_name` varchar(100) NOT NULL,
+  `city` enum('Bangalore','Delhi','Mumbai','Hyderabad','Pune') NOT NULL,
+  `capacity` int NOT NULL DEFAULT '20',
+  `latitude` decimal(10,4) NOT NULL,
+  `longitude` decimal(10,4) NOT NULL,
+  PRIMARY KEY (`hub_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Physical hub locations for vehicle storage, charging, and dispatch across Indian cities';
+
+CREATE TABLE `payments` (
+  `payment_id` int NOT NULL,
+  `booking_id` int NOT NULL,
+  `amount` decimal(10,2) NOT NULL,
+  `payment_mode` enum('UPI','Cash','Card','Net Banking') NOT NULL,
+  `payment_status` enum('paid','pending','overdue') NOT NULL DEFAULT 'pending',
+  `payment_date` datetime NOT NULL,
+  `transaction_id` varchar(20) NOT NULL,
+  PRIMARY KEY (`payment_id`),
+  KEY `fk_payment_booking` (`booking_id`),
+  CONSTRAINT `fk_payment_booking` FOREIGN KEY (`booking_id`) REFERENCES `bookings` (`booking_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `bookings` (
+  `booking_id` int NOT NULL,
+  `customer_id` int NOT NULL,
+  `vehicle_id` int NOT NULL,
+  `hub_id` int NOT NULL,
+  `booking_date` datetime NOT NULL,
+  `start_date` date NOT NULL,
+  `end_date` date NOT NULL,
+  `package` enum('1 Month','3 Months','6 Months','12 Months') NOT NULL,
+  `rental_plan` enum('Daily','Weekly','Monthly') NOT NULL,
+  `charger_opted` tinyint(1) NOT NULL DEFAULT '0',
+  `amount` decimal(10,2) NOT NULL,
+  `status` enum('completed','active','overdue','cancelled') NOT NULL DEFAULT 'active',
+  `renewed` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`booking_id`),
+  KEY `fk_booking_customer` (`customer_id`),
+  KEY `fk_booking_vehicle` (`vehicle_id`),
+  KEY `fk_booking_hub` (`hub_id`),
+  CONSTRAINT `fk_booking_customer` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`customer_id`) ON DELETE RESTRICT ON UPDATE CASCADE,
+  CONSTRAINT `fk_booking_hub` FOREIGN KEY (`hub_id`) REFERENCES `hubs` (`hub_id`) ON DELETE RESTRICT ON UPDATE CASCADE,
+  CONSTRAINT `fk_booking_vehicle` FOREIGN KEY (`vehicle_id`) REFERENCES `vehicles` (`vehicle_id`) ON DELETE RESTRICT ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+CREATE TABLE `sales_agents` (
+  `agent_id` int NOT NULL,
+  `first_name` varchar(50) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `hub_id` int NOT NULL,
+  `phone` varchar(15) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `join_date` date NOT NULL,
+  `status` enum('active','inactive') NOT NULL DEFAULT 'active',
+  PRIMARY KEY (`agent_id`),
+  KEY `idx_agent_hub` (`hub_id`),
+  CONSTRAINT `fk_agent_hub` FOREIGN KEY (`hub_id`) REFERENCES `hubs` (`hub_id`) ON DELETE RESTRICT ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Sales agents responsible for customer acquisition and field operations at each hub';
+
+CREATE TABLE `vehicles` (
+  `vehicle_id` int NOT NULL,
+  `model` enum('Ola S1 Pro','Ather 450X','TVS iQube','Bounce Infinity','Hero Vida') NOT NULL,
+  `status` enum('deployed','idle','maintenance') NOT NULL DEFAULT 'idle',
+  `hub_id` int NOT NULL,
+  `battery_id` varchar(20) NOT NULL,
+  `charger_type` enum('Type 2 AC','CCS2 DC','Portable','Hub Charger') NOT NULL,
+  `registration_date` date NOT NULL,
+  PRIMARY KEY (`vehicle_id`),
+  KEY `idx_vehicle_model` (`model`),
+  KEY `idx_vehicle_hub` (`hub_id`),
+  CONSTRAINT `fk_vehicle_hub` FOREIGN KEY (`hub_id`) REFERENCES `hubs` (`hub_id`) ON DELETE RESTRICT ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Electric vehicles available for rent, each assigned to a hub with battery and charger details';
+
