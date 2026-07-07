@@ -1,0 +1,16 @@
+agent_id,first_name,last_name,hub_id,phone,email,join_date,status
+1,Arjun,Kumar,8,6672031731,arjun.kumar@optimotion.com,2025-04-25,active
+2,Priya,Rao,8,6559351919,priya.rao@optimotion.com,2025-03-08,active
+3,Vikram,Sharma,3,8376874147,vikram.sharma@optimotion.com,2025-04-24,active
+4,Sneha,Pillai,6,7988086870,sneha.pillai@optimotion.com,2025-04-19,active
+5,Rahul,Iyer,5,9772072204,rahul.iyer@optimotion.com,2025-03-09,active
+6,Anita,Joshi,2,6969868710,anita.joshi@optimotion.com,2025-05-05,active
+7,Karthik,Reddy,8,9667427520,karthik.reddy@optimotion.com,2025-03-13,active
+8,Meera,Patel,4,7242049668,meera.patel@optimotion.com,2025-06-04,active
+9,Suresh,Deshmukh,6,7992603346,suresh.deshmukh@optimotion.com,2025-05-28,active
+10,Divya,Gupta,6,7636251984,divya.gupta@optimotion.com,2025-08-22,active
+11,Amit,Menon,2,6539686008,amit.menon@optimotion.com,2025-07-16,active
+12,Pooja,Das,8,7838265784,pooja.das@optimotion.com,2025-03-02,inactive
+13,Rajesh,Verma,4,6029757830,rajesh.verma@optimotion.com,2025-08-06,active
+14,Kavita,Nair,5,7093612040,kavita.nair@optimotion.com,2025-01-30,active
+15,Nikhil,Singh,1,9700115640,nikhil.singh@optimotion.com,2025-02-01,active

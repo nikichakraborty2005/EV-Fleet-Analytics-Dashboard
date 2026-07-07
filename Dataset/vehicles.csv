@@ -1,0 +1,151 @@
+vehicle_id,model,status,hub_id,battery_id,charger_type,registration_date
+1,Ather 450X,idle,3,BAT-WU4770,CCS2 DC,2025-04-11
+2,Ather 450X,deployed,6,BAT-FX6372,Portable,2025-12-21
+3,TVS iQube,deployed,2,BAT-MS9978,CCS2 DC,2026-05-30
+4,Ola S1 Pro,deployed,5,BAT-UX7681,Type 2 AC,2025-03-06
+5,TVS iQube,deployed,4,BAT-MR6392,Portable,2025-11-24
+6,TVS iQube,deployed,1,BAT-DD3377,Hub Charger,2026-01-16
+7,Ola S1 Pro,idle,1,BAT-YB4160,Type 2 AC,2025-01-04
+8,Ather 450X,deployed,2,BAT-QH3586,Hub Charger,2025-01-30
+9,Ather 450X,deployed,7,BAT-YA6308,Hub Charger,2025-03-17
+10,Bounce Infinity,maintenance,1,BAT-PW6827,Hub Charger,2025-10-03
+11,Ola S1 Pro,deployed,6,BAT-IO9741,Type 2 AC,2026-03-07
+12,Hero Vida,deployed,8,BAT-RO6769,Type 2 AC,2025-09-19
+13,Ather 450X,deployed,6,BAT-FI5893,Portable,2025-05-04
+14,Ola S1 Pro,deployed,2,BAT-ES5382,Hub Charger,2025-11-29
+15,Ather 450X,deployed,8,BAT-TX8727,CCS2 DC,2026-04-12
+16,Ather 450X,deployed,1,BAT-MF1680,Portable,2025-01-13
+17,Ather 450X,deployed,4,BAT-DY8952,Type 2 AC,2026-04-30
+18,TVS iQube,idle,7,BAT-TY8758,CCS2 DC,2025-12-17
+19,TVS iQube,idle,5,BAT-NM8769,Type 2 AC,2026-05-07
+20,Ola S1 Pro,maintenance,3,BAT-VJ8939,CCS2 DC,2025-07-18
+21,Ola S1 Pro,idle,2,BAT-QR4081,Portable,2025-11-01
+22,Bounce Infinity,deployed,3,BAT-IV3829,CCS2 DC,2025-02-15
+23,TVS iQube,deployed,4,BAT-ZB2559,Portable,2025-11-29
+24,Ather 450X,deployed,2,BAT-ND1625,Type 2 AC,2026-01-08
+25,Bounce Infinity,deployed,8,BAT-XG4006,CCS2 DC,2025-08-02
+26,Ather 450X,idle,8,BAT-OX5611,Hub Charger,2025-04-03
+27,Bounce Infinity,idle,7,BAT-YR5490,Hub Charger,2025-11-08
+28,Ather 450X,deployed,3,BAT-JX3670,Type 2 AC,2026-03-15
+29,Ola S1 Pro,deployed,6,BAT-ZM8432,CCS2 DC,2026-02-12
+30,Hero Vida,deployed,8,BAT-KA5725,Hub Charger,2025-02-22
+31,Ather 450X,maintenance,7,BAT-FX8002,Portable,2025-04-13
+32,Bounce Infinity,deployed,3,BAT-RO5537,CCS2 DC,2025-12-12
+33,Ather 450X,idle,1,BAT-DJ1559,CCS2 DC,2025-01-13
+34,TVS iQube,idle,1,BAT-JU7203,Hub Charger,2026-02-10
+35,Hero Vida,maintenance,4,BAT-MO1037,Portable,2025-11-07
+36,Ola S1 Pro,idle,5,BAT-YA2832,Portable,2025-02-10
+37,Bounce Infinity,idle,7,BAT-YH1432,Portable,2025-04-26
+38,TVS iQube,deployed,2,BAT-OL2751,CCS2 DC,2025-07-24
+39,TVS iQube,deployed,1,BAT-FY1256,Type 2 AC,2026-01-01
+40,TVS iQube,deployed,3,BAT-JQ2682,CCS2 DC,2025-04-25
+41,Hero Vida,deployed,3,BAT-KI2975,CCS2 DC,2025-12-31
+42,Ola S1 Pro,maintenance,1,BAT-QQ5939,Hub Charger,2025-11-22
+43,Ather 450X,deployed,5,BAT-TK7200,Type 2 AC,2025-11-02
+44,Hero Vida,idle,4,BAT-RR1045,Portable,2025-01-13
+45,Bounce Infinity,deployed,6,BAT-JP7282,Hub Charger,2025-04-20
+46,Ola S1 Pro,deployed,3,BAT-WX1636,CCS2 DC,2026-01-03
+47,TVS iQube,maintenance,2,BAT-VA5183,Type 2 AC,2025-05-15
+48,TVS iQube,deployed,4,BAT-XL7032,Portable,2026-05-02
+49,Ather 450X,deployed,7,BAT-YV3108,Portable,2025-07-06
+50,Ather 450X,deployed,1,BAT-ZI5332,CCS2 DC,2026-05-07
+51,TVS iQube,idle,7,BAT-CU8939,Portable,2026-02-27
+52,Ola S1 Pro,deployed,3,BAT-TK2845,Portable,2025-02-21
+53,Bounce Infinity,deployed,7,BAT-WK8069,Type 2 AC,2025-07-17
+54,Bounce Infinity,deployed,6,BAT-CV2578,Hub Charger,2025-08-13
+55,Ather 450X,idle,3,BAT-PN8714,Type 2 AC,2026-01-22
+56,Ather 450X,idle,6,BAT-DU4960,Hub Charger,2025-01-23
+57,Ather 450X,deployed,1,BAT-DQ3732,Hub Charger,2025-03-18
+58,Ather 450X,deployed,8,BAT-ZZ1667,Hub Charger,2025-07-20
+59,Bounce Infinity,idle,3,BAT-AK9080,Portable,2025-02-28
+60,Ather 450X,deployed,4,BAT-HI7604,Type 2 AC,2026-01-25
+61,TVS iQube,deployed,6,BAT-KB8785,Portable,2025-12-25
+62,Ather 450X,deployed,7,BAT-LJ8372,CCS2 DC,2025-02-27
+63,Ather 450X,idle,2,BAT-YX7338,Type 2 AC,2026-03-23
+64,Ola S1 Pro,deployed,5,BAT-TG1904,Hub Charger,2025-10-04
+65,Ola S1 Pro,deployed,3,BAT-SH9021,Portable,2025-09-24
+66,Ola S1 Pro,idle,3,BAT-RR3289,Portable,2025-01-14
+67,Ather 450X,deployed,6,BAT-KP8690,Type 2 AC,2025-08-15
+68,Hero Vida,deployed,3,BAT-AN3666,Type 2 AC,2025-11-19
+69,Bounce Infinity,deployed,3,BAT-PZ3181,Hub Charger,2026-01-30
+70,Ather 450X,idle,7,BAT-KR6899,Hub Charger,2025-04-30
+71,Ola S1 Pro,maintenance,1,BAT-WE8226,CCS2 DC,2025-05-16
+72,Ola S1 Pro,deployed,5,BAT-DX8736,Hub Charger,2025-08-09
+73,Ather 450X,deployed,2,BAT-QD1556,Portable,2026-04-22
+74,Ather 450X,deployed,1,BAT-LS9243,CCS2 DC,2026-04-25
+75,Ather 450X,idle,1,BAT-RC1671,CCS2 DC,2026-01-23
+76,Ola S1 Pro,idle,5,BAT-JE4139,CCS2 DC,2025-01-26
+77,Ola S1 Pro,deployed,6,BAT-ZS7763,Type 2 AC,2025-11-19
+78,Ola S1 Pro,deployed,1,BAT-CJ7327,Hub Charger,2025-02-10
+79,Ola S1 Pro,idle,1,BAT-WC1500,CCS2 DC,2026-05-22
+80,Bounce Infinity,deployed,8,BAT-ZC8234,Type 2 AC,2026-04-16
+81,Ola S1 Pro,deployed,1,BAT-EA5284,Type 2 AC,2026-03-17
+82,Ather 450X,deployed,8,BAT-ZQ6901,CCS2 DC,2025-03-10
+83,TVS iQube,deployed,2,BAT-RP5482,CCS2 DC,2026-02-21
+84,Hero Vida,deployed,6,BAT-WW9643,Portable,2025-02-11
+85,Hero Vida,idle,2,BAT-UU6241,CCS2 DC,2025-10-03
+86,Bounce Infinity,deployed,7,BAT-CK3588,Portable,2026-02-15
+87,Ola S1 Pro,deployed,6,BAT-OA4218,CCS2 DC,2026-03-26
+88,TVS iQube,deployed,3,BAT-NN7000,CCS2 DC,2025-03-27
+89,Bounce Infinity,deployed,1,BAT-YP5428,Hub Charger,2025-01-30
+90,Ola S1 Pro,deployed,6,BAT-FW2446,CCS2 DC,2025-11-09
+91,TVS iQube,deployed,5,BAT-AF6790,CCS2 DC,2026-05-14
+92,Hero Vida,idle,1,BAT-PN1864,Portable,2025-04-27
+93,Ather 450X,deployed,1,BAT-MX7217,Portable,2026-01-18
+94,Ola S1 Pro,deployed,7,BAT-IR5659,Hub Charger,2026-02-26
+95,Ola S1 Pro,deployed,2,BAT-BW4041,CCS2 DC,2025-03-21
+96,Ather 450X,deployed,5,BAT-AX1066,CCS2 DC,2026-03-24
+97,Ola S1 Pro,idle,4,BAT-GM7806,Portable,2025-08-06
+98,TVS iQube,deployed,7,BAT-RG7107,Type 2 AC,2025-09-25
+99,Bounce Infinity,maintenance,8,BAT-HD1929,Type 2 AC,2026-05-27
+100,Ola S1 Pro,deployed,8,BAT-EE8973,Type 2 AC,2025-04-30
+101,Hero Vida,idle,1,BAT-BA3819,Portable,2025-10-11
+102,Ather 450X,deployed,7,BAT-GA9480,Portable,2025-12-28
+103,Ola S1 Pro,idle,2,BAT-HU4574,Type 2 AC,2025-12-29
+104,Bounce Infinity,deployed,5,BAT-XR4133,Type 2 AC,2025-10-15
+105,Bounce Infinity,deployed,4,BAT-TA3888,CCS2 DC,2025-11-02
+106,TVS iQube,idle,1,BAT-CI7249,Portable,2025-07-01
+107,Hero Vida,idle,8,BAT-SR1892,Portable,2025-04-13
+108,Bounce Infinity,deployed,1,BAT-CR5503,Type 2 AC,2026-02-17
+109,Hero Vida,deployed,6,BAT-IG4695,Type 2 AC,2025-02-01
+110,Ather 450X,deployed,6,BAT-UO6013,Hub Charger,2025-05-23
+111,Bounce Infinity,idle,6,BAT-KG3515,Portable,2025-06-09
+112,Hero Vida,deployed,1,BAT-HI7616,Hub Charger,2025-06-24
+113,Bounce Infinity,deployed,4,BAT-AN4561,CCS2 DC,2025-07-08
+114,Ola S1 Pro,idle,7,BAT-IQ5184,Hub Charger,2025-05-07
+115,TVS iQube,idle,2,BAT-FC6969,Type 2 AC,2026-02-16
+116,TVS iQube,deployed,4,BAT-ZH1734,Portable,2025-12-01
+117,Ola S1 Pro,idle,2,BAT-EA5268,Portable,2026-03-21
+118,Hero Vida,idle,4,BAT-DX4872,Hub Charger,2025-03-02
+119,Ola S1 Pro,deployed,7,BAT-WX9007,Hub Charger,2026-03-22
+120,Ola S1 Pro,deployed,4,BAT-YB6138,CCS2 DC,2025-08-12
+121,Hero Vida,idle,4,BAT-TN1544,CCS2 DC,2025-05-22
+122,Ather 450X,deployed,3,BAT-JK9015,Type 2 AC,2026-04-23
+123,Ola S1 Pro,maintenance,4,BAT-TS3708,Type 2 AC,2025-02-16
+124,TVS iQube,deployed,1,BAT-VI6914,Type 2 AC,2026-05-23
+125,TVS iQube,deployed,2,BAT-QM9399,Hub Charger,2025-12-31
+126,Ola S1 Pro,maintenance,3,BAT-RL9118,Hub Charger,2025-06-08
+127,Hero Vida,deployed,5,BAT-EQ2461,Portable,2025-03-07
+128,TVS iQube,deployed,4,BAT-HY5775,Type 2 AC,2025-11-30
+129,TVS iQube,idle,3,BAT-SU8262,Hub Charger,2025-06-01
+130,TVS iQube,idle,3,BAT-AY7142,Portable,2026-04-04
+131,TVS iQube,deployed,2,BAT-PI3484,Type 2 AC,2026-01-05
+132,Ather 450X,deployed,8,BAT-PV9186,CCS2 DC,2025-01-15
+133,Ather 450X,idle,4,BAT-PL1656,CCS2 DC,2025-07-14
+134,TVS iQube,idle,1,BAT-EH7839,Hub Charger,2025-03-04
+135,Bounce Infinity,deployed,1,BAT-EC7176,Portable,2025-10-09
+136,Ola S1 Pro,idle,8,BAT-YX4563,CCS2 DC,2025-03-26
+137,TVS iQube,idle,2,BAT-IR7182,Portable,2025-04-04
+138,Bounce Infinity,deployed,7,BAT-DX3273,Portable,2025-10-31
+139,Ola S1 Pro,idle,1,BAT-NN4094,CCS2 DC,2026-05-19
+140,Ola S1 Pro,deployed,8,BAT-GW2589,Portable,2025-10-05
+141,Ather 450X,deployed,7,BAT-JP5648,CCS2 DC,2025-11-17
+142,TVS iQube,idle,4,BAT-BV4683,Hub Charger,2025-11-29
+143,Ola S1 Pro,idle,1,BAT-QB9055,Type 2 AC,2025-05-10
+144,Ather 450X,idle,2,BAT-RK2868,Type 2 AC,2025-04-30
+145,TVS iQube,deployed,3,BAT-HL7403,Hub Charger,2026-01-08
+146,TVS iQube,deployed,4,BAT-UG4542,CCS2 DC,2025-12-18
+147,Ather 450X,deployed,2,BAT-XQ5637,CCS2 DC,2025-07-29
+148,Ather 450X,deployed,1,BAT-IS9457,CCS2 DC,2025-10-05
+149,Bounce Infinity,deployed,5,BAT-PM4148,CCS2 DC,2025-12-28
+150,Hero Vida,deployed,4,BAT-MH1209,Hub Charger,2025-08-30
