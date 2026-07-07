@@ -23,7 +23,6 @@ The objective is to help EV fleet businesses make data-driven decisions by ident
 - Power BI
 - Microsoft Excel
 - Git
-- GitHub
 
 ## 📊 Dashboard Preview
 
