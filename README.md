@@ -27,8 +27,9 @@ The objective is to help EV fleet businesses make data-driven decisions by ident
 
 ## 📊 Dashboard Preview
 
-[Dashboard](PASTE_IMAGE_LINK_HERE)
+[Dashboard](Images/Dashboard image.png)
 
+## Dashboard Visuals
 
 
 ## 📂 Project Structure
