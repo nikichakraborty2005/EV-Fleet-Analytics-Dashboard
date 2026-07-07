@@ -32,11 +32,12 @@ The objective is to help EV fleet businesses make data-driven decisions by ident
 ## Dashboard Visuals
 
 
-## 📂 Repository Structure
+## 📁 Repository Structure
 
+```text
 EV-Fleet-Analytics-Dashboard
 │
-├── Dataset/
+├── Dataset
 │   ├── bookings.csv
 │   ├── customers.csv
 │   ├── hubs.csv
@@ -45,17 +46,23 @@ EV-Fleet-Analytics-Dashboard
 │   ├── vehicles.csv
 │   └── cleaned_master.csv
 │
-├── Documentation/
+├── Images
+│   ├── Dashboard image.png
+│   ├── revenue_by_city_query.png
+│   ├── monthly_revenue_query.png
+│   ├── top_customers_query.png
+│   └── database_tables.png
 │
-├── Images/
-│
-├── SQL/
+├── SQL
 │   ├── database_schema.sql
 │   └── portfolio_queries.sql
 │
+├── Documentation
+│   └── README.md
+│
 ├── EV_Fleet_Analytics_Dashboard.pbix
 └── README.md
-
+```
 
 ## ✨ Features
 
