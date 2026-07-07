@@ -27,19 +27,32 @@ The objective is to help EV fleet businesses make data-driven decisions by ident
 
 ## 📊 Dashboard Preview
 
-![Dashboard](Images/Dashboard image.png)
+![EV Fleet Analytics Dashboard](Images/Dashboard.png)
 
 ## Dashboard Visuals
 
 
-## 📂 Project Structure
+## 📂 Repository Structure
 
 EV-Fleet-Analytics-Dashboard
 │
-├── Dataset
-├── SQL
-├── Images
-├── Documentation
+├── Dataset/
+│   ├── bookings.csv
+│   ├── customers.csv
+│   ├── hubs.csv
+│   ├── payments.csv
+│   ├── sales_agents.csv
+│   ├── vehicles.csv
+│   └── cleaned_master.csv
+│
+├── Documentation/
+│
+├── Images/
+│
+├── SQL/
+│   ├── database_schema.sql
+│   └── portfolio_queries.sql
+│
 ├── EV_Fleet_Analytics_Dashboard.pbix
 └── README.md
 
@@ -83,4 +96,49 @@ The project includes SQL queries for:
 - Revenue by Package
 - Booking Status Distribution
 - Top Customers by Revenue
-- Most Booked Vehicle Models  
+- Most Booked Vehicle Models
+- ## 🗄 Sample SQL Query
+Example query used to identify the highest revenue-generating cities.
+
+![Revenue by City SQL](Images/Revenue_By_City_Query.png)
+
+## 💼 Business Recommendations
+
+• Increase marketing efforts in high-performing cities.
+
+• Promote long-term subscription packages to improve customer retention.
+
+• Expand the availability of high-demand vehicle models.
+
+• Encourage EV charger adoption through promotional offers.
+
+• Monitor cancelled and overdue bookings to improve operational efficiency.
+
+## 🚀 Future Improvements
+
+- Real-time dashboard using SQL Server
+- Machine Learning-based demand prediction
+- Customer churn prediction
+- Interactive web dashboard deployment
+
+  
+## 🛠 Skills Demonstrated
+
+- SQL
+- Data Cleaning
+- Data Modeling
+- Data Visualization
+- Power BI
+- Dashboard Design
+- Business Analytics
+- KPI Development
+- Git & GitHub
+
+## 👩‍💻 Author
+
+Nikita Chakraborty
+
+Chemical Engineering Undergraduate | MANIT Bhopal
+
+Aspiring Data Analyst
+
