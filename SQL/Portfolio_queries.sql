@@ -1,12 +1,4 @@
--- ============================================================================
--- QUERY 1: Total Bookings, Revenue, and Active Rides Summary
--- ============================================================================
--- WHAT:      High-level dashboard KPIs — total bookings, total revenue,
---            and count of currently active rides.
--- CONCEPTS:  Aggregate functions (COUNT, SUM), CASE WHEN inside SUM for
---            conditional aggregation.
--- INSIGHT:   Gives the CEO a single-glance view of platform health and scale.
--- ============================================================================
+
 SELECT
     COUNT(*)                                        AS total_bookings,
     SUM(amount)                                     AS total_revenue,
@@ -16,16 +8,7 @@ SELECT
     ROUND(AVG(amount), 2)                           AS avg_booking_value
 FROM bookings;
 
--- ============================================================================
--- QUERY 2: Month-over-Month Revenue Growth Percentage
--- ============================================================================
--- WHAT:      Calculates monthly revenue and the percentage change compared
---            to the previous month using the LAG window function.
--- CONCEPTS:  DATE_FORMAT for month extraction, LAG() window function,
---            percentage calculation with ROUND, NULL handling for first month.
--- INSIGHT:   Reveals growth trajectory — accelerating, stable, or declining.
---            Critical for investor reporting and forecasting.
--- ============================================================================
+
 WITH monthly_revenue AS (
     SELECT
         DATE_FORMAT(booking_date, '%Y-%m')  AS revenue_month,
@@ -46,16 +29,7 @@ SELECT
     ) AS growth_pct
 FROM monthly_revenue;
 
--- ============================================================================
--- QUERY 4: Top 5 Vehicle Models by Booking Count
--- ============================================================================
--- WHAT:      Ranks EV models by popularity (number of bookings) to identify
---            which models customers prefer.
--- CONCEPTS:  JOIN between bookings and vehicles, GROUP BY, ORDER BY DESC,
---            LIMIT for top-N analysis.
--- INSIGHT:   Guides procurement decisions — invest more in popular models,
---            phase out underperforming ones.
--- ============================================================================
+
 SELECT
     v.model,
     COUNT(b.booking_id)     AS total_bookings,
@@ -68,17 +42,7 @@ GROUP BY v.model
 ORDER BY total_bookings DESC
 LIMIT 5;
 
--- ============================================================================
--- QUERY 11: Sales Agent Leaderboard
--- ============================================================================
--- WHAT:      Ranks sales agents by the number of customers they referred who
---            went on to make bookings, plus total revenue attributed to them.
--- CONCEPTS:  Multi-table JOIN (agents → customers → bookings), complex
---            aggregation with COUNT DISTINCT, LEFT JOIN for agents with zero
---            referrals, COALESCE for NULL handling.
--- INSIGHT:   Identifies top-performing agents for bonuses and underperformers
---            for coaching. Revenue attribution helps calculate commission.
--- ============================================================================
+
 SELECT
     sa.agent_id,
     CONCAT(sa.first_name, ' ', sa.last_name)    AS agent_name,
@@ -98,16 +62,7 @@ LEFT JOIN bookings b  ON c.customer_id = b.customer_id AND b.status != 'cancelle
 GROUP BY sa.agent_id, sa.first_name, sa.last_name, h.hub_name, h.city
 ORDER BY total_revenue_attributed DESC;
 
--- ============================================================================
--- QUERY 12: Package Popularity Trend by Month
--- ============================================================================
--- WHAT:      Shows how the popularity of each package type changes month over
---            month — are customers shifting to longer commitments?
--- CONCEPTS:  DATE_FORMAT for month extraction, GROUP BY on two dimensions
---            (month × package), COUNT for frequency analysis.
--- INSIGHT:   A shift from "1 Month" to "6 Months" packages indicates growing
---            customer confidence. Useful for pricing strategy adjustments.
--- ============================================================================
+
 SELECT
     DATE_FORMAT(booking_date, '%Y-%m')  AS booking_month,
     package,
@@ -119,18 +74,8 @@ WHERE status != 'cancelled'
 GROUP BY DATE_FORMAT(booking_date, '%Y-%m'), package
 ORDER BY booking_month, booking_count DESC;
 
--- ============================================================================
--- QUERY 20: Hub-to-Hub Demand Gap Analysis (Self-Join)
--- ============================================================================
--- WHAT:      Compares every pair of hubs within the same city to identify
---            demand imbalances — one hub may be overwhelmed while a nearby
---            hub is underutilized.
--- CONCEPTS:  Self-join on hubs table (h1 × h2), subquery aggregation,
---            ABS() for absolute difference, percentage gap calculation.
--- INSIGHT:   Demand gaps suggest vehicle redistribution opportunities.
---            If Hub A has 3x the bookings of Hub B in the same city,
---            vehicles should be moved from B to A.
--- ============================================================================
+--
+
 WITH hub_demand AS (
     -- Aggregate booking metrics per hub
     SELECT
